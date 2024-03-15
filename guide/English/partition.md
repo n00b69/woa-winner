@@ -1,7 +1,7 @@
 <img align="right" src="https://github.com/wormstest/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Nfc
+# Running Windows on the SAMSUNG WINNER
 
 ## Installation
 
@@ -11,14 +11,12 @@
 > **Warning** if you delete any partitions via diskpart later on or now windows will send a ufs command that gets misinterpreted which erase all your ufs
 - All your data will be erased! Backup now if needed.
 - These commands have been tested.
-- Ignore `udevadm` warnings
 - Do not run the same command twice
-- DO NOT REBOOT YOUR PHONE if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/windows_on_pocox3_nfc)
 
-#### Boot TWRP recovery through the PC with the command
-```cmd
-fastboot boot <twrp.img>
-```
+#### THE FIRST STEP UNLOCK BOOTLOADER 
+
+#### FLASH TWRP recovery through the PC with the Odin
+
 > If you already have TWRP installed, just hold the power and vol+ buttons at startup
 
 #### Unmount all partitions
@@ -52,50 +50,53 @@ parted /dev/block/sda
 > You can make sure that 16 is the userdata partition number by running
 >  `print all`
 ```sh
-rm 16
+rm 3O
 ```
 
 ### Create partitions
 > If you get any warning message telling you to ignore or cancel, just type i and enter
 
-#### For 64Gb models:
+#### For all 512Gb models WITH WINPE:
 
 - Create the ESP partition (stores Windows bootloader data and EFI files)
  ```sh
-mkpart esp fat32 10.8GB 11GB
+mkpart esp fat32 9730MB 10.2GB
 ```
+- Create the main partition where WindowsPE will be installed to
+```sh
+mkpart pe fat32 10.2GB 25GB
 
 - Create the main partition where Windows will be installed to
 ```sh
-mkpart win ntfs 11GB 45GB 
+mkpart win ntfs 25 312GB
 ```
 
 - Create Android's data partition
 ```sh
-mkpart userdata ext4 45GB 59.4GB
+mkpart userdata ext4 312GB -0MB
 ```
 
-#### For 128Gb models:
+#### For 512Gb models WITHOUT WindowsPE:
 
 - Create the ESP partition (stores Windows bootloader data and EFI files)
 ```sh
-mkpart esp fat32 10.8GB 11GB
+mkpart esp fat32 9730MB 10.2GB
 ```
 
 - Create the main partition where Windows will be installed to
 ```sh
-mkpart win ntfs 11GB 65GB
+mkpart win ntfs 10.2GB 312GB
 ```
 
 - Create Android's data partition
 ```sh
-mkpart userdata ext4 65GB 123GB
+mkpart userdata ext4 312GB -0MB
 ```
 
 
 ### Make ESP partiton bootable so the EFI image can detect it
 ```sh
-set 16 esp on
+set 30 esp on
 ```
 
 ### Quit parted
@@ -113,12 +114,12 @@ adb shell
 ### Format partitions
 -  Format the ESP partiton as FAT32
 ```sh
-mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPSURYA
+mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPWINNER
 ```
 
 -  Format the Windows partition as NTFS
 ```sh
-mkfs.ntfs -f /dev/block/by-name/win -L WINSURYA
+mkfs.ntfs -f /dev/block/by-name/win -L WINWINNER
 ```
 
 - Format data
