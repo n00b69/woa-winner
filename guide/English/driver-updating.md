@@ -1,4 +1,4 @@
-<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
+<img align="right" src="(https://www.zeebiz.com/technology/mobiles/news-bad-news-for-galaxy-fold-owners-samsung-sounds-death-knell-for-this-feature-205199)" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
 # Running Windows on the SAMSUNG WINNER
