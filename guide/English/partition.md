@@ -1,4 +1,4 @@
-<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide)" width="350" alt="Windows 11 Running On A SAMSUNG winner F900F">
+<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="350" alt="Windows 11 Running On A SAMSUNG winner F900F">
 
 
 # Running Windows on the SAMSUNG WINNER
