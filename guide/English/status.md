@@ -1,5 +1,4 @@
-<img align="right" src="(https://www.zeebiz.com/technology/mobiles/news-bad-news-for-galaxy-fold-owners-samsung-sounds-death-knell-for-this-feature-205199)" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
-
+<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/FOLD.png)" width="350" height="241" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 # Running Windows on the Samsung Galaxy Fold winner F900F
 
