@@ -16,10 +16,9 @@ Alpha, Windows 11 boot but without USB, the next thing is to try to make the USB
 - [ ] Camera
 - [ ] Charging 
 - [x] Display
-- [ ] FM
+- [x] External display 
 - [x] GPU
 - [ ] LTE 
-- [ ] SD 
 - [ ] Touchscreen 
 - [x] UFS
 - [x] USB 
