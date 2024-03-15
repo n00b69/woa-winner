@@ -65,6 +65,7 @@ mkpart esp fat32 9730MB 10.2GB
 - Create the main partition where WindowsPE will be installed to
 ```sh
 mkpart pe fat32 10.2GB 25GB
+```
 
 - Create the main partition where Windows will be installed to
 ```sh
