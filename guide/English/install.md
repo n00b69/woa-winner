@@ -25,7 +25,7 @@ https://mega.nz/file/K5UkQLrC#vCwlitpuZmEELGl33BxMMmv_NbGhJhaDWVoICm6sSAs
 
 Here is instruction: use msc.sh then on PC in disk manager right click
 on disk and click online(it will wipe primary gpt table in lun0). now in
-recovery use "gdisk /dev/block/sda" (\\.\physicaldrive# where # your drive number in windows manager and these commands "r, c, y, w
+recovery use "gdisk /dev/block/sda" (\\.\physicaldrive# where # your drive number in windows disk manager and these commands "r, c, y, w
 and y" it will restore gpt table, after reconnecting phone to pc it will show that disk is active.
 
 ## Assign letters to disks
