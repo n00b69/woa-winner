@@ -1,7 +1,7 @@
-<img align="right" src="https://github.com/wormstest/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
+<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
-# Running Windows on the POCO X3 NFC
+# Running Windows on the SAMSUNG GALAXY FOLD
 
 ## ⚠️ Warning
 
@@ -16,7 +16,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - Have the bootloader unlocked
 
-- Have the [TWRP](https://mega.nz/file/zY4GCDRT#PxUKhUHkucj1oRH_Iu-R6exDak66hPeI71xJWHCTQkY) or [Orange Fox](https://drive.google.com/file/d/1eHM9ST9ni-55bbT3z-TGSZQsgE3KYr9s/view ) installed
+- Have the [TWRP](https://xdaforums.com/t/twrp-3-4-0-for-the-samsung-galaxy-fold.4006795/) or [twrp_MOD WITH mount partition esp,win,winpe and included parted](https://mega.nz/file/LoVGETDK#-lwSOZeVRTuyOYOOv84RqhZJs8Ns-ESpoM6cT6-X-Kg) installed
 
 - Have downloaded the [Platform Tools](https://developer.android.com/studio/releases/platform-tools?hl=es-419)
 
@@ -26,7 +26,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - Have the script of [Mass Storage Mode](https://www.mediafire.com/file/m4yecbhu9fifjy7/msc.sh/file) (This file belongs to [Gus33000](https://github.com/gus33000 ) )
 
-- Have the [X3 NFC Uefi](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/releases/tag/Uefi)
+- Have the [FOLD Uefi](https://github.com/woa-msmnile/msmnilePkg/releases/tag/2402.86)
 
 - Have the [Drivers](https://github.com/Icesito68/7xx-Drivers) and the [Installer](https://github.com/WOA-Project/DriverUpdater/releases/)
 
@@ -38,11 +38,9 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Installation instructions](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/partition.md)
 
-- [Uninstall instructions](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/uninstall)
-
 
 ## Miscellaneous
 
-- [Project Status](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/status.md)
+- [Project Status](https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/status.md)
 
-- [Driver updating instructions](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/driver-updating.md)
+- [Driver updating instructions](https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/driver-updating.md)
