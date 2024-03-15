@@ -143,4 +143,4 @@ then type `yes`.
 just restart the phone, and see if Android still works
 
 
-## [Next step: Install Windows](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/install.md)
+## [Next step: Install Windows](https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/install.md)
