@@ -22,7 +22,7 @@ Alpha, Windows 11 boot but without USB, the next thing is to try to make the USB
 - [ ] SD 
 - [ ] Touchscreen 
 - [x] UFS
-- [x] USB ```Work is underway to make it work on Windows```
+- [x] USB 
 - [ ] Wi-Fi
 
 #### Sensors
