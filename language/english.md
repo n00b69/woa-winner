@@ -5,7 +5,7 @@
 
 ## ⚠️ Warning
 
-We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead microSD cards, dead pmics, dead ram, dead display ics, dead cpus, any xiaomi/poco shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
+We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead microSD cards, dead pmics, dead ram, dead display ics, dead cpus, any samsung shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
 
 This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. This is a delicate process, do it under your own risk and follow all the steps carefully.
 
@@ -28,7 +28,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - Have the [FOLD Uefi](https://github.com/woa-msmnile/msmnilePkg/releases/tag/2402.86)
 
-- Have the [Drivers](https://github.com/Icesito68/7xx-Drivers) and the [Installer](https://github.com/WOA-Project/DriverUpdater/releases/)
+- Have the [Drivers](https://github.com/Icesito68/Samsung-SM8150-Drivers) and the [Installer](https://github.com/WOA-Project/DriverUpdater/releases/)
 
   </summary>
 </details>
