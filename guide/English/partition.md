@@ -1,4 +1,4 @@
-<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
+<img align="right" src="(https://www.zeebiz.com/technology/mobiles/news-bad-news-for-galaxy-fold-owners-samsung-sounds-death-knell-for-this-feature-205199)" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
 # Running Windows on the SAMSUNG WINNER
@@ -108,7 +108,20 @@ quit
 
 ### Start the shell again on your PC
 ```cmd
+cd C:\adb
 adb shell
+setprop sys.usb.ffs.ready 1
+setprop sys.usb.config adb
+echo 0 > /config/usb_gadget/g1/bDeviceClass
+echo 0 > /config/usb_gadget/g1/bDeviceSubClass
+echo 0 > /config/usb_gadget/g1/bDeviceProtocol
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/cdrom
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/ro
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/removable 0
+echo /dev/block/sda > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
+ln -s /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f4
+sh -c 'echo > /config/usb_gadget/g1/UDC; echo a600000.dwc3 > /config/usb_gadget/g1/UDC' &
+[1] 690
 ```
 
 ### Format partitions
