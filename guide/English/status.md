@@ -1,7 +1,7 @@
 <img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
-# Running Windows on the Samsung Winner F900F
+# Running Windows on the Samsung Galaxy Fold winner F900F
 
 ## Project status
 
