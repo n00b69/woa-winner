@@ -36,7 +36,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 ## Get Started
 
-- [Installation instructions](https://github.com/SebastianZSXS/Poco-X3-NFC-WindowsARM/blob/main/guide/English/partition.md)
+- [Installation instructions](https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/partition.md)
 
 
 ## Miscellaneous
