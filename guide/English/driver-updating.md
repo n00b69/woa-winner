@@ -1,7 +1,7 @@
 <img align="right" src="(https://www.zeebiz.com/technology/mobiles/news-bad-news-for-galaxy-fold-owners-samsung-sounds-death-knell-for-this-feature-205199)" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
-# Running Windows on the SAMSUNG WINNER
+# Running Windows on the SAMSUNG GALAXY FOLD WINNER F900F
 
 ## Driver updating
 
