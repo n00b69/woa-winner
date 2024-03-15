@@ -109,9 +109,13 @@ quit
 ### Start the shell again on your PC
 ```cmd
 cd C:\adb
+
 adb shell
+
 setprop sys.usb.ffs.ready 1
+
 setprop sys.usb.config adb
+
 echo 0 > /config/usb_gadget/g1/bDeviceClass
 echo 0 > /config/usb_gadget/g1/bDeviceSubClass
 echo 0 > /config/usb_gadget/g1/bDeviceProtocol
