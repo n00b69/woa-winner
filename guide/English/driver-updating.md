@@ -1,15 +1,11 @@
-<img align="right" src="https://github.com/wormstest/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
+<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/edit/main/guide/English/OIP.png))" width="164" alt="Windows 11 Running On SAMSUNG winner F900F">
 
 
-# Running Windows on the POCO X3 Nfc
+# Running Windows on the SAMSUNG WINNER
 
 ## Driver updating
 
-#### Start TWRP recovery through the PC with the command
-
-```cmd
-fastboot boot <twrp.img>
-```
+#### Start TWRP recovery through the PC Odin 
 
 > If you already have TWRP installed, just hold the power and vol+ buttons at startup
 
@@ -46,33 +42,45 @@ diskpart
 select volume <number>
 ```
 
-#### Assign the letter x
-```diskpart
-assign letter=x
-```
+DISKPART> sel par 30 yor partition
+# Select the ESP partition, in this case it's 0 for our device
 
-### Exit diskpart:
-```diskpart
-exit
-```
+DO NOT EXECUTE THE FOLLOWING COMMAND IF YOU ONLY WANT TO MOUNT PARTITIONS
+DISKPART> format quick fs=fat32 label="System"
+# Format ESP as fat32
+
+DISKPART> assign letter="X"
+# Assign drive letter
+
+DISKPART> sel par 31 yor partition
+# Select Windows partition, in this case it's 31 for our device
+
+DO NOT EXECUTE THE FOLLOWING COMMAND IF YOU ONLY WANT TO MOUNT PARTITIONS
+DISKPART> format quick fs=ntfs label="WinWinner"
+# Format Windows partition as NTFS
+
+DISKPART> assign letter="R"
+# Assign drive letter
+
+DISKPART> exit
 
 
 # Install Drivers
 
-> Replace `<suryadriversfolder>` with the location of the drivers folder
+> Replace `<winnerdriversfolder>` with the location of the drivers folder
 
 > Open cmd as administrator
 
 
 ```cmd
-.\driverupdater.exe -d <suryariversfolder>\definitions\Desktop\ARM64\Internal\surya.txt -r <suryadriversfolder> -p X:
+.\driverupdater.exe -d <winnerdriversfolder>\definitions\Desktop\ARM64\Internal\winner.txt -r <winnerdriversfolder> -p X:
 ```
 
 
 ##### Boot with Windows bootable UEFI image #####
 
 ```
-fastboot flash boot <uefi.img>
+Flash uefi image samsung_winner.img via TWRP
 ```
 
   
