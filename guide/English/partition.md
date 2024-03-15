@@ -69,7 +69,7 @@ mkpart pe fat32 10.2GB 25GB
 
 - Create the main partition where Windows will be installed to
 ```sh
-mkpart win ntfs 25 312GB
+mkpart win ntfs 25GB 312GB
 ```
 
 - Create Android's data partition
