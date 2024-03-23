@@ -1,10 +1,8 @@
-<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/FOLD.png)" alt="Windows 11 Running On SAMSUNG GALAXY FOLD">
-
+<img align="right" src="https://github.com/n00b69/SAMSUNG-WINNER-WindowsARM/blob/main/winner.png" alt="Windows 11 running on winner">
 
 # Running Windows on the SAMSUNG GALAXY FOLD
 
 ## ⚠️ Warning
-
 We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead microSD cards, dead pmics, dead ram, dead display ics, dead cpus, any samsung shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
 
 This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. This is a delicate process, do it under your own risk and follow all the steps carefully.
@@ -14,7 +12,6 @@ This project is in an early stage, all the files here have been contributed by o
 
 ## Choose you language
 
-- [English](language/english.md)
 
 ## Contributors
 [<img alt="ungeskriptet" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/40729975?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/ungeskriptet)
