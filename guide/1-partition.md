@@ -1,7 +1,6 @@
-<img align="right" src="(https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/FOLD.png)" alt="Windows 11 Running On SAMSUNG GALAXY FOLD">
+<img align="right" src="https://github.com/n00b69/SAMSUNG-WINNER-WindowsARM/blob/main/winner.png" alt="Windows 11 running on winner">
 
-
-# Running Windows on the SAMSUNG WINNER
+# Running Windows on the SAMSUNG GALAXY FOLD
 
 ## Installation
 
