@@ -2,8 +2,6 @@
 
 # Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
-## Installation
-
 ## Partitioning your device
 
 ## Notes:
@@ -12,21 +10,20 @@
 - These commands have been tested.
 - Do not run the same command twice
 
-#### THE FIRST STEP UNLOCK BOOTLOADER 
+### THE FIRST STEP UNLOCK BOOTLOADER 
 
-#### FLASH TWRP recovery through the PC with the Odin
-
+### FLASH TWRP recovery through the PC with the Odin
 > If you already have TWRP installed, just hold the power and vol+ buttons at startup
 
-#### Unmount all partitions
+### Unmount all partitions
 Go to TWRP settings and unmount all partitions
 
- ## Push necessary tools:
+### Push necessary tools:
 ```cmd
 adb push parted /sbin
 ```
 
-## Start the ADB shell
+### Start ADB shell
 ```cmd
 adb shell
 ```
@@ -38,15 +35,13 @@ adb shell
 chmod +x /sbin/*
 ```
 
-
 ### Start parted
 ```sh
 parted /dev/block/sda
 ```
 
-
 ### Delete the `userdata` partition
-> You can make sure that 16 is the userdata partition number by running
+> You can make sure that 30 is the userdata partition number by running
 >  `print all`
 ```sh
 rm 3O
@@ -147,4 +142,14 @@ then type `yes`.
 just restart the phone, and see if Android still works
 
 
-## [Next step: Install Windows](https://github.com/Ost268/SAMSUNG-WINNER-WindowsARM/blob/main/guide/English/install.md)
+## [Next step: Installing Windows](2-install.md)
+
+
+
+
+
+
+
+
+
+
