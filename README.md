@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/SAMSUNG-WINNER-WindowsARM/blob/main/winner.png" alt="Windows 11 running on winner">
 
-# Running Windows on the SAMSUNG GALAXY FOLD
+# Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead microSD cards, dead pmics, dead ram, dead display ics, dead cpus, any samsung shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
@@ -10,7 +10,17 @@ This project is in an early stage, all the files here have been contributed by o
 **IF YOU AREN'T COMFORTABLE MODDING YOUR PHONE OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
 
 
-## Choose you language
+## Get started
+- [Project status](guide/status.md)
+
+- [Installation instructions](guide/1-partition.md)
+
+- ~~[Dualboot setup](guide/dualboot.md)~~
+
+## Miscelaneous
+- [Updating drivers](guide/update.md)
+
+- [Uninstall instructions](guide/uninstall.md)
 
 
 ## Contributors
