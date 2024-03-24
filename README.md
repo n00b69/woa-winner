@@ -24,7 +24,7 @@ This project is in an early stage, all the files here have been contributed by o
 ## Miscelaneous
 - [Updating drivers](guide/update.md)
 
-- [Uninstall instructions](guide/uninstall.md)
+- ~~[Uninstall instructions](guide/uninstall.md)~~
 
 
 ## Contributors
