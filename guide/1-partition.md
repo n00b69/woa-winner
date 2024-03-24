@@ -4,145 +4,119 @@
 
 ## Partitioning your device
 
-## Notes:
-> **Warning** if you delete any partitions via diskpart later on or now windows will send a ufs command that gets misinterpreted which erase all your ufs
-- All your data will be erased! Backup now if needed.
-- These commands have been tested.
-- Do not run the same command twice
+### Prerequisites
+- A brain (most important of all)
 
-### THE FIRST STEP UNLOCK BOOTLOADER 
+- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+  
+- [TWRP]() FILE NEEDED
 
-### FLASH TWRP recovery through the PC with the Odin
-> If you already have TWRP installed, just hold the power and vol+ buttons at startup
+- [Parted]() FILE NEEDED
 
-### Unmount all partitions
+
+### Notes
+> [!WARNING]  
+> Do not run the same command twice unless specified.
+> 
+> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woa_msmnile_issues).
+> 
+> Do not run all commands at once, execute them in order!
+>
+> YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
+
+### Flash TWRP with Odin
+> If you already have TWRP installed, boot to it
+
+#### Unmount all partitions
 Go to TWRP settings and unmount all partitions
 
-### Push necessary tools:
+#### Running parted
+> Download the parted file and move it in the platform-tools folder, then run
 ```cmd
-adb push parted /sbin
+adb push parted /sbin && adb shell "chmod +x /sbin/parted" && adb shell /sbin/parted /dev/block/sda
 ```
 
-### Start ADB shell
+#### Printing the current partition table
+> Parted will print the list of partitions, userdata should be the last partition in the list.
 ```cmd
-adb shell
+print
 ```
 
-## Create Partitions
-
-### Give permissions
+#### Removing userdata
+> Replace **$** with the number of the **userdata** partition, which should be **30**
 ```cmd
-chmod +x /sbin/*
+rm $
 ```
 
-### Start parted
-```sh
-parted /dev/block/sda
-```
+## FOR USERS WITH WINPE
+> Skip to "FOR USERS WITHOUT WINPE" if you don't want to use WinPE
 
-### Delete the `userdata` partition
-> You can make sure that 30 is the userdata partition number by running
->  `print all`
-```sh
-rm 3O
-```
-
-### Create partitions
-> If you get any warning message telling you to ignore or cancel, just type i and enter
-
-#### For all 512Gb models WITH WINPE:
-
-- Create the ESP partition (stores Windows bootloader data and EFI files)
- ```sh
+#### Creating ESP partition
+```cmd
 mkpart esp fat32 9730MB 10.2GB
 ```
-- Create the main partition where WindowsPE will be installed to
-```sh
+
+#### Creating WinPE partition
+```cmd
 mkpart pe fat32 10.2GB 25GB
 ```
 
-- Create the main partition where Windows will be installed to
-```sh
+#### Creating Windows partition
+```cmd
 mkpart win ntfs 25GB 312GB
 ```
 
-- Create Android's data partition
-```sh
+#### Recreating userdata
+```cmd
 mkpart userdata ext4 312GB -0MB
 ```
 
-#### For 512Gb models WITHOUT WindowsPE:
 
-- Create the ESP partition (stores Windows bootloader data and EFI files)
-```sh
+
+## FOR USERS WITHOUT WINPE
+> Return "FOR USERS WITH WINPE" if you want to use WinPE
+
+#### Creating ESP partition
+```cmd
 mkpart esp fat32 9730MB 10.2GB
 ```
 
-- Create the main partition where Windows will be installed to
-```sh
+#### Creating Windows partition
+```cmd
 mkpart win ntfs 10.2GB 312GB
 ```
 
-- Create Android's data partition
-```sh
+#### Recreating userdata
+```cmd
 mkpart userdata ext4 312GB -0MB
 ```
 
-
-### Make ESP partiton bootable so the EFI image can detect it
-```sh
-set 30 esp on
+#### Make ESP bootable
+> Replace **$** with the number of the **ESP** partition, which should be **31**
+```cmd
+set $ esp on
 ```
 
-### Quit parted
-```sh
+#### Exit parted
+```cmd
 quit
 ```
 
-### Reboot to TWRP
-
-### Start the shell again on your PC
-```cmd
-cd C:\adb
-
-adb shell
-
-setprop sys.usb.ffs.ready 1
-
-setprop sys.usb.config adb
-
-echo 0 > /config/usb_gadget/g1/bDeviceClass
-echo 0 > /config/usb_gadget/g1/bDeviceSubClass
-echo 0 > /config/usb_gadget/g1/bDeviceProtocol
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/cdrom
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/ro
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/removable 0
-echo /dev/block/sda > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
-ln -s /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f4
-sh -c 'echo > /config/usb_gadget/g1/UDC; echo a600000.dwc3 > /config/usb_gadget/g1/UDC' &
-[1] 690
-```
-
-### Format partitions
--  Format the ESP partiton as FAT32
-```sh
-mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPWINNER
-```
-
--  Format the Windows partition as NTFS
-```sh
-mkfs.ntfs -f /dev/block/by-name/win -L WINWINNER
-```
-
-- Format data
-Go to Wipe menu and press Format Data, 
+#### Format data
+Go to the Wipe menu and press Format Data, 
 then type `yes`.
 
 ### Check if Android still starts
-just restart the phone, and see if Android still works
-
+Restart the phone, and see if Android still works
 
 ## [Next step: Installing Windows](2-install.md)
+
+
+
+
+
+
+
 
 
 
