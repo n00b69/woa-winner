@@ -19,7 +19,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Installation instructions](guide/1-partition.md)
 
-- ~~[Dualboot setup](guide/dualboot.md)~~
+- [Dualboot setup](guide/dualboot.md)
 
 ## Miscelaneous
 - [Updating drivers](guide/update.md)
