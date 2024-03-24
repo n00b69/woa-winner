@@ -71,8 +71,6 @@ mkpart win ntfs 25GB 312GB
 mkpart userdata ext4 312GB -0MB
 ```
 
-
-
 ## FOR USERS WITHOUT WINPE
 > Return "FOR USERS WITH WINPE" if you want to use WinPE
 
@@ -92,7 +90,7 @@ mkpart userdata ext4 312GB -0MB
 ```
 
 #### Make ESP bootable
-> Replace **$** with the number of the **ESP** partition, which should be **31**
+> Replace **$** with the number of the **ESP** partition, which should be **30**
 ```cmd
 set $ esp on
 ```
