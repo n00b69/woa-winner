@@ -147,7 +147,7 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 
 #### Enabling boot menu
 ```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" ndisplaybootmenu yes
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" displaybootmenu yes
 ```
 
 #### Disabling boot status policy
