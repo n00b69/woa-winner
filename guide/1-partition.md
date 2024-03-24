@@ -11,7 +11,7 @@
   
 - [Modded TWRP](https://mega.nz/file/LoVGETDK#-lwSOZeVRTuyOYOOv84RqhZJs8Ns-ESpoM6cT6-X-Kg)
 
-- [Parted]() FILE NEEDED
+- [Parted](https://github.com/n00b69/woa-beryllium/releases/download/Files/parted)
 
 
 ### Notes
@@ -24,8 +24,8 @@
 >
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
-### Flash TWRP with Odin
-> If you already have TWRP installed, boot to it
+### Flash the modded TWRP with Odin
+> This guide will not work with regular TWRP
 
 #### Unmount all partitions
 Go to TWRP settings and unmount all partitions
