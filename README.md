@@ -1,6 +1,10 @@
 <img align="right" src="https://github.com/n00b69/SAMSUNG-WINNER-WindowsARM/blob/main/winner.png" width="350" alt="Windows 11 running on winner">
 
 # Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/woa_msmnile_issues)
+
+> [!Warning]
+> This guide and its files are still in a very early stage of development. They may be unstable, and you may even brick your device. **PROCEED AT YOUR OWN RISK**
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead microSD cards, dead pmics, dead ram, dead display ics, dead cpus, any samsung shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
