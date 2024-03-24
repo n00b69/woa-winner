@@ -5,7 +5,6 @@
 ## Installation
 
 ### Prerequisites
-
 - [Windows on ARM image](https://worproject.com/esd)
   
 - [Drivers]() FILE NEEDED
