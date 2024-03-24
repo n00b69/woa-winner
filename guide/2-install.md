@@ -104,7 +104,7 @@ format quick fs=ntfs label="WINPE"
 
 #### Add letter to WinPE
 ```cmd
-assign letter z
+assign letter r
 ```
 
 ### Selecting the Windows partition
