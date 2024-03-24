@@ -10,7 +10,7 @@
   
 - [Drivers]() FILE NEEDED
 
-- [TWRP]() (should already be installed) FILE NEEDED
+- [Modded TWRP](https://mega.nz/file/LoVGETDK#-lwSOZeVRTuyOYOOv84RqhZJs8Ns-ESpoM6cT6-X-Kg) (should already be installed)
 
 
 ### Reboot to TWRP
@@ -18,24 +18,7 @@
 
 #### Entering mass storage mode
 ```cmd
-cd C:\adb
-
-adb shell
-
-setprop sys.usb.ffs.ready 1
-
-setprop sys.usb.config adb
-
-echo 0 > /config/usb_gadget/g1/bDeviceClass
-echo 0 > /config/usb_gadget/g1/bDeviceSubClass
-echo 0 > /config/usb_gadget/g1/bDeviceProtocol
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/cdrom
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/ro
-echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/removable 0
-echo /dev/block/sda > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
-ln -s /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f4
-sh -c 'echo > /config/usb_gadget/g1/UDC; echo a600000.dwc3 > /config/usb_gadget/g1/UDC' &
-[1] 690
+adb shell msc.sh
 ```
 
 ### Correct disk mapping in Windows disk manager 
