@@ -4,21 +4,41 @@
 
 ## Installation
 
-> You will need to have MTP disabled in Mount
+### Prerequisites
+
+- [Windows on ARM image](https://worproject.com/esd)
+  
+- [Drivers]() FILE NEEDED
+
+- [TWRP]() (should already be installed) FILE NEEDED
 
 
-## Push necessary tools:
+### Reboot to TWRP
+> Disable MTP in TWRP
+
+#### Entering mass storage mode
 ```cmd
-adb push msc.sh /sbin
+cd C:\adb
+
+adb shell
+
+setprop sys.usb.ffs.ready 1
+
+setprop sys.usb.config adb
+
+echo 0 > /config/usb_gadget/g1/bDeviceClass
+echo 0 > /config/usb_gadget/g1/bDeviceSubClass
+echo 0 > /config/usb_gadget/g1/bDeviceProtocol
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/cdrom
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/ro
+echo 0 > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/removable 0
+echo /dev/block/sda > /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
+ln -s /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f4
+sh -c 'echo > /config/usb_gadget/g1/UDC; echo a600000.dwc3 > /config/usb_gadget/g1/UDC' &
+[1] 690
 ```
 
-### Execute the msc script
-
-```cmd
-adb shell sh /sbin/msc.sh
-```
-
-##  Correct disk mapping in Windows disk manager 
+### Correct disk mapping in Windows disk manager 
 https://sourceforge.net/projects/gptfdisk/files/gptfdisk/
 https://mega.nz/file/K5UkQLrC#vCwlitpuZmEELGl33BxMMmv_NbGhJhaDWVoICm6sSAs
 
@@ -27,117 +47,143 @@ on disk and click online(it will wipe primary gpt table in lun0). now in
 recovery use "gdisk /dev/block/sda" (\\.\physicaldrive# where # your drive number in windows disk manager) and these commands "r, c, y, w
 and y" it will restore gpt table, after reconnecting phone to pc it will show that disk is active.
 
-## Assign letters to disks
-  
-
-#### Start the Windows disk manager
-
-> Once the inner is detected as a disk
+### Diskpart
+>  [!WARNING]
+> DO NOT ERASE ANY PARTITION WHILE IN DISKPART!!!! THIS WILL ERASE ALL OF YOUR UFS!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Samsung or flashing it with EDL (which doesn't even exist on Samsung devices), both of which will likely cost money)
 
 ```cmd
 diskpart
 ```
 
-
-### Assign `X` to Windows volume
-
-#### Select the Windows volume of the phone
-> Use `list volume` to find it, it's the ones named "WINWINNER" and "ESPWINNER"
-
-```diskpart
-select volume <number>
+#### Finding your phone
+> This will list all connected disks
+```cmd
+lis dis
 ```
 
-#### Assign the letter X
-```diskpart
-assign letter=x
+#### Selecting your phone
+> Replace $ with the actual number of your phone (it should be the last one)
+```cmd
+sel dis $
 ```
 
-### Assign `X` to esp volume
-
-#### Select the esp volume of the phone
-> Use `list volume` to find it, it's usually the last one
-
-```diskpart
-select volume <number>
+#### Listing your phone's partitions
+> This will list your device's partitions
+```cmd
+lis par
 ```
 
-#### Assign the letter R
-
-```diskpart
-assign letter=r
+### Selecting the ESP partition
+> Replace $ with the partition number of ESP (should be 30)
+```cmd
+sel par $
 ```
 
-### Exit diskpart:
-```diskpart
+#### Formatting ESP drive
+```cmd
+format quick fs=fat32 label="ESPWINNER"
+```
+
+#### Add letter to ESP
+```cmd
+assign letter y
+```
+
+### Selecting the WinPE partition
+> Skip this step if you are not using WinPE
+> 
+> Replace $ with the partition number of WinPE (should be 31)
+```cmd
+sel par $
+```
+
+#### Formatting WinPE drive
+```cmd
+format quick fs=ntfs label="WINPE"
+```
+
+#### Add letter to WinPE
+```cmd
+assign letter z
+```
+
+### Selecting the Windows partition
+> Replace $ with the partition number of Windows (should be 31, or 32 if you are using WinPE)
+```cmd
+sel par $
+```
+
+#### Formatting Windows drive
+```cmd
+format quick fs=ntfs label="WINWINNER"
+```
+
+#### Add letter to Windows
+```cmd
+assign letter x
+```
+
+#### Exit diskpart
+```cmd
 exit
 ```
 
-  
-  
-
-## Install
-
-> Replace `<path/to/install.wim>` with the actual install.wim path,
-
-> `install.wim` is located in sources folder inside your ISO
-> You can get it either by mounting or extracting it
+### Installing Windows
+> Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
 
 ```cmd
-dism /apply-image /ImageFile:<path/to/install.wim> /index:1 /ApplyDir:R:\
+dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ```
 
-# Install Drivers
+> If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
 
+#### Installing drivers
 > Replace `<winnerdriversfolder>` with the location of the drivers folder
-
 ```cmd
 driverupdater.exe -d <winnerdriversfolder>\definitions\Desktop\ARM64\Internal\winner.txt -r <winnerdriversfolder> -p X:
 ```
 
-  
-
-# Create Windows bootloader files for the EFI
-
+#### Create Windows bootloader files
 ```cmd
-bcdboot X:\Windows /s R: /f UEFI
+bcdboot X:\Windows /s Y: /f UEFI
 ```
-# R: is the assigned letter for the Windows partition
-# X: is the assigned letter for the EFI partition
-# if you use different ones, be sure to replace them!
-    
 
-# Allow unsigned drivers
-
-> If you don't do this you'll get a BSOD
-
-```cmd or PowerShell with admin privileges
-bcdedit /store BCD /set "{default}" testsigning on
-bcdedit /store BCD /set "{default}" nointegritychecks on
-bcdedit /store BCD /set "{default}" recoveryenabled yes
-bcdedit /store BCD /set "{bootmgr}" displaybootmenu yes
-bcdedit /store BCD /set "{default}" bootstatuspolicy IgnoreAllFailures
-```
-### Enable usb c port
-
-run regedit in your pc
-reg load HKLM\OFFLINE R:\Windows\System32\Config\System
-regedit
-In HKEY_LOCAL_MACHINE/OFFLINE/ControlSet001/Control/USB/OsDefaultRoleSwitchMode change value to 1 After, in the command line of your PC, enter reg unload HKLM\OFFLINE Done!
-
-# Boot into Windows
-
-### Move the `<uefi.img>` file to the device
-
+#### Enabling test signing
 ```cmd
-adb push <uefi.img> /sdcard
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
+#### Disabling recovery
+```cmd
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
+```
 
-### Flash the uefi image from TWRP
-Navigate to the `uefi.img` file and flash it into boot
+#### Disabling integrity checks
+```cmd
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
+```
 
-# Boot back into Android
-> Use your backup boot image from TWRP
+#### Enabling boot menu
+```cmd
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" ndisplaybootmenu yes
+```
 
-# Finished!
+#### Disabling boot status policy
+```cmd
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" bootstatuspolicy IgnoreAllFailures
+```
+
+### Reboot to Android
+> To set up dualboot
+
+## [Last step: Setting up dualboot](/guide/dualboot.md)
+
+
+
+
+
+
+
+
+
+
