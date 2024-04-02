@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [UEFI image](https://github.com/woa-msmnile/msmnilePkg/releases/download/2402.86/samsung-winner_NOSB.img) 
+- [UEFI image](https://github.com/n00b69/woa-winner/releases/tag/UEFI) 
 
 - [WOA Helper app](https://github.com/n00b69/woa-beryllium/releases/download/Dualboot/woahelper.apk)
 
