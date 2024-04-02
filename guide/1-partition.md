@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [Modded TWRP](https://mega.nz/file/LoVGETDK#-lwSOZeVRTuyOYOOv84RqhZJs8Ns-ESpoM6cT6-X-Kg)
+- [Modded TWRP](https://github.com/n00b69/woa-winner/releases/tag/Recovery)
 
 - [Parted](https://github.com/n00b69/woa-beryllium/releases/download/Files/parted)
 
