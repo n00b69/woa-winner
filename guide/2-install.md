@@ -7,9 +7,9 @@
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
   
-- [Drivers]() FILE NEEDED
+- [Drivers](https://github.com/n00b69/woa-winner/releases/tag/Drivers)
 
-- [Modded TWRP](https://mega.nz/file/LoVGETDK#-lwSOZeVRTuyOYOOv84RqhZJs8Ns-ESpoM6cT6-X-Kg) (should already be installed)
+- [Modded TWRP](https://github.com/n00b69/woa-winner/releases/tag/Recovery) (should already be installed)
 
 
 ### Reboot to TWRP
