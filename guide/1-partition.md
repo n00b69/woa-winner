@@ -24,11 +24,11 @@
 >
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
-### Flash the modded TWRP with Odin
-> This guide will not work with regular TWRP
+### Flash the modded TWRP
+> If you have the official TWRP installed, flash it through there. Otherwise use Odin.
 
 #### Unmount all partitions
-Go to TWRP settings and unmount all partitions
+Go to TWRP > Mount > and unmount all partitions
 
 #### Running parted
 > Download the parted file and move it in the platform-tools folder, then run
