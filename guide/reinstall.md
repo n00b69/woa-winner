@@ -2,23 +2,23 @@
 
 # Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
+### Prerequisites
+- [Windows on ARM image](https://worproject.com/esd)
 
-
-
-
-
-
-
-
-
-
+- [Drivers](https://github.com/n00b69/woa-winner/releases/tag/Drivers)
+  
+- [UEFI image](https://github.com/n00b69/woa-winner/releases/tag/UEFI)
 
 ### Diskpart
 ```cmd
 diskpart
 ```
 
-#### Select 
+#### Select the Windows volume of the phone
+> Use `list volume` to find it, replace "$" with the actual number of **WINWINNER**
+```diskpart
+select volume $
+```
 
 #### Add letter to Windows
 ```cmd
