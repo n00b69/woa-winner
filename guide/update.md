@@ -2,59 +2,36 @@
 
 # Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
-## Driver updating
+## Updating drivers
 
 ### Prerequisites
-- [Windows on ARM image](https://worproject.com/esd)
-  
 - [Drivers](https://github.com/n00b69/woa-winner/releases/tag/Drivers)
 
-- [Modded TWRP](https://github.com/n00b69/woa-winner/releases/tag/Recovery) (should already be installed)
-
-### Boot to the modded TWRP
-> Flash it in Odin if you don't have it installed for whatever reason
-
-#### Running the msc script
-```cmd
-adb shell msc.sh
-```
-
-### Diskpart
-```cmd
-diskpart
-```
-
-#### List device volumes
-> To print a list of all the connected volumes, run
-```cmd
-list volume
-```
-
-#### Select Windows volume
-> Replace $ with the actual number of **WINWINNER**
-```cmd
-select volume $
-```
-
-#### Assign letter to WINWINNER
-```cmd
-assign letter x
-```
-
-#### Exit diskpart
-```cmd
-exit
-```
+### Boot into Windows
+> Flash the UEFI image in fastboot or use the WOA Helper app
 
 ### Installing Drivers
-> Unpack the driver archive, then open the `OfflineUpdater.cmd` file
+> Unpack the driver archive on your Galaxy Fold while in Windows, then open the `OnlineUpdater.cmd` file
 
-> Enter the drive letter of `WINWINNER`, which should be X, then press enter
+> Follow any instructions provided on the screen
 
-### Boot back into Windows
-> Reboot your device to boot back into Windows. If this boots you to Android, reflash the UEFI image through fastboot or by using the WOA Helper app
+> If you see an error after installing **App Packages**, ignore it, and reboot your device manually after it says **Done!**
 
-  
-  
+## Finished!
 
-# Finished!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
