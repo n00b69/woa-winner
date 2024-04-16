@@ -1,6 +1,6 @@
-<img align="right" src="https://github.com/n00b69/woa-polaris/blob/main/polaris.png" width="350" alt="Windows 11 running on polaris">
+<img align="right" src="https://github.com/n00b69/woa-winner/blob/main/winner.png" width="350" alt="Windows 11 running on winner">
 
-# Running Windows on the Xiaomi Mix 2s
+# Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
 ## Additional materials
 > Below you will find a list of tweaks and materials for Windows on your ARM device
