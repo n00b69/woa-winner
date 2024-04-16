@@ -18,12 +18,12 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Installation instructions](guide/1-partition.md)
 
-- ~~[Troubleshooting](guide/troubleshooting.md)~~
+- [Troubleshooting](guide/troubleshooting.md)
 
 ## Miscellaneous
 - [Dualboot setup](guide/dualboot.md)
 
-- ~~[Additional materials](guide/materials.md)~~
+- [Additional materials](guide/materials.md)
 
 - [Update drivers](guide/update.md)
 
