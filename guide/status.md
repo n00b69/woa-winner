@@ -3,19 +3,17 @@
 # Running Windows on the SAMSUNG GALAXY FOLD SM-F900F
 
 ## Project status
-
 Alpha, Windows 11 boot but without USB, the next thing is to try to make the USB work
 
 #### Features
-
 - [ ] Audio 
 - [ ] Battery status
 - [ ] Bluetooth
 - [ ] Brightness
 - [ ] Camera
-- [ ] Charging 
+- [x] Charging ```very slow```
 - [x] Display
-- [x] External display 
+- [ ] External display 
 - [x] GPU
 - [ ] LTE 
 - [ ] Touchscreen 
