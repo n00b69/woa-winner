@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
 
-- [Gdisk]() FILE NEEDED
+- [Gdisk](https://github.com/n00b69/woa-winner/releases/tag/Gdisk)
 
 - [Drivers](https://github.com/n00b69/woa-winner/releases/tag/Drivers)
 
@@ -21,25 +21,19 @@
 adb shell msc.sh
 ```
 
+### Windows Disk Management
+- In your start menu, type "disk manager" and press enter.
+- Look for your phone (which should be a 512GB disk) in disk manager.
+- If it says **Offline**, right click the disk and set it to **Online**.
 
-
-
-
-
-
-### Open disk manager
-> In your start menu, type "disk manager" and press enter
-
-#### Locate your phone
-> Look for your phone (which should be a 512GB disk) in disk manager. If it says **Offline**, right click the disk and set it to **Online**
-
-#### Launching gdisk
+#### Gdisk
+> Open **gdisk** as an admin, then run the following command in gdisk, replacing **$** with the actual number of the disk
 ```cmd
-adb shell gdisk /dev/block/sda
+\\.\physicaldriver$
 ```
 
 #### Restoring the GPT table
-> In gdisk, run these commands individually in this exact order.
+> In **gdisk**, run these commands individually in this exact order.
 ```cmd
 r
 ```
@@ -59,30 +53,9 @@ y
 #### Reconnect your phone
 > Simply replug the cable
 
-
-
-
-
-
-
-
-### Correct disk mapping in Windows disk manager 
-https://sourceforge.net/projects/gptfdisk/files/gptfdisk/
-https://mega.nz/file/K5UkQLrC#vCwlitpuZmEELGl33BxMMmv_NbGhJhaDWVoICm6sSAs
-
-> Here is instruction: use msc.sh
-> 
-> in disk manager right click on disk and click online(it will wipe primary gpt table in lun0).
-> 
-> now in recovery use "gdisk /dev/block/sda" (\\.\physicaldrive# where # your drive number in windows disk manager)
->
-> and these commands "r, c, y, w and y" it will restore gpt table
->
-> after reconnecting phone to pc it will show that disk is active.
-
 ### Diskpart
 > [!WARNING]
-> DO NOT ERASE ANY PARTITION WHILE IN DISKPART!!!! THIS WILL ERASE ALL OF YOUR UFS!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Samsung or flashing it with EDL, both of which will likely cost money)
+> DO NOT ERASE OR CLEAN ANY PARTITION WHILE IN DISKPART!!!! THIS WILL ERASE ALL OF YOUR UFS!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Samsung or flashing it with EDL, both of which will likely cost money)
 ```cmd
 diskpart
 ```
