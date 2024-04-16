@@ -13,19 +13,23 @@ This project is in an early stage, all the files here have been contributed by o
 
 **IF YOU AREN'T COMFORTABLE MODDING YOUR PHONE OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
 
-
 ## Get started
 - [Project status](guide/status.md)
 
 - [Installation instructions](guide/1-partition.md)
 
+- ~~[Troubleshooting](guide/troubleshooting.md)~~
+
+## Miscellaneous
 - [Dualboot setup](guide/dualboot.md)
 
-## Miscelaneous
-- [Updating drivers](guide/update.md)
+- ~~[Additional materials](guide/materials.md)~~
+
+- [Update drivers](guide/update.md)
+
+- ~~[Reinstall instructions](guide/reinstall.md)~~
 
 - ~~[Uninstall instructions](guide/uninstall.md)~~
-
 
 ## Contributors
 [<img alt="ungeskriptet" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/40729975?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/ungeskriptet)
