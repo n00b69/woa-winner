@@ -89,7 +89,6 @@ Restart the phone, and see if Android still works
 
 
 
-## Finished!
 
 
 
