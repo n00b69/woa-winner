@@ -7,7 +7,15 @@
 
 - [Drivers](https://github.com/n00b69/woa-winner/releases/tag/Drivers)
   
-- [UEFI image](https://github.com/n00b69/woa-winner/releases/tag/UEFI)
+- [Modded TWRP](https://github.com/n00b69/woa-winner/releases/tag/Recovery) (should already be installed)
+
+### Reboot to TWRP
+> Disable MTP in TWRP
+
+#### Entering mass storage mode
+```cmd
+adb shell msc.sh
+```
 
 ### Diskpart
 ```cmd
