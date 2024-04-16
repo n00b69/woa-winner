@@ -11,7 +11,6 @@
 
 - [Modded TWRP](https://github.com/n00b69/woa-winner/releases/tag/Recovery) (should already be installed)
 
-
 ### Reboot to TWRP
 > Disable MTP in TWRP
 
@@ -30,7 +29,7 @@ recovery use "gdisk /dev/block/sda" (\\.\physicaldrive# where # your drive numbe
 and y" it will restore gpt table, after reconnecting phone to pc it will show that disk is active.
 
 ### Diskpart
->  [!WARNING]
+> [!WARNING]
 > DO NOT ERASE ANY PARTITION WHILE IN DISKPART!!!! THIS WILL ERASE ALL OF YOUR UFS!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Samsung or flashing it with EDL (which doesn't even exist on Samsung devices), both of which will likely cost money)
 
 ```cmd
@@ -120,10 +119,11 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
 
 #### Installing drivers
-> Replace `<winnerdriversfolder>` with the location of the drivers folder
-```cmd
-driverupdater.exe -d <winnerdriversfolder>\definitions\Desktop\ARM64\Internal\winner.txt -r <winnerdriversfolder> -p X:
-```
+> Unpack the driver archive, then open the `OfflineUpdater.cmd` file
+
+> If it asks you to enter a letter, enter the drive letter of **WINWINNER** (which should be X), then press enter
+
+> If any errors appear under **Installing App Packages**, ignore them and continue
 
 #### Create Windows bootloader files
 ```cmd
