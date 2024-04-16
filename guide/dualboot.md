@@ -17,16 +17,15 @@
 This guide assumes you are rooted, if you aren't, please do that first.
 
 ### Setup - Android
-- Download and install the WOA Helper app, then open it and grant it root access.
-- Download the UEFI image for your panel and place it inside the folder named `UEFI` in your internal storage.
-- Press the `Mount Windows` button to mount Windows to your internal storage at `/sdcard/Windows`
-> [!Important]
-> If `/sdcard/Windows` is empty, your rom does not support mounting and you will have to make a boot.img backup inside the app, then copy it manually to Windows once you boot to it (for example by uploading it somewhere and then downloading it while booted into Windows). The same applies to the STA files.
->
-> Do the same thing if the folder is read-only.
-- Create a folder called `sta` in Windows and unpack the two files in the `Switch to Android package` file here (the files should go to `/sdcard/Windows/sta`
-- Return to the WOA Helper app and press the `Quickboot` button.
-
+- Download and install the **WOA Helper** app, then open it and grant it root access.
+- Open the settings inside the app and uncheck `Back up boot.img if none is detected (Windows)` (this feature does not work on the Galaxy Fold due to no mount support).
+- Download the **UEFI** image and place it inside the folder named `UEFI` in your internal storage.
+- Press the `BACK UP BOOT IMAGE` button, then select `Android`.
+- Create a folder called `sta` in your internal storage and unpack the two files from `winner-sta.zip` file here.
+- Reboot to TWRP and mount **Windows** if it isn't already mounted.
+- Move/copy the **sta** folder and the **boot.img** file from your internal storage to `/win` in the root of your device's storage.
+- Flash the **UEFI** in `/sdcard/UEFI` to the boot partition to boot to Windows.
+  
 ### Setup - Windows
 - Navigate to C:\sta and create a shortcut of `sta.exe` to your desktop.
 
