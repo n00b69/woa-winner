@@ -34,6 +34,8 @@ adb shell msc.sh
 
 #### Restoring the GPT table
 > In **gdisk**, run these commands individually in this exact order.
+>
+> If `y` does not work. type `yes y` instead.
 ```cmd
 r
 ```
