@@ -67,7 +67,7 @@ mkpart win ntfs 10.2GB 300GB
 >
 > Replace **300GB** with the end value you want WinPE to have
 ```cmd
-mkpart win ntfs 300GB 325GB
+mkpart winpe ntfs 300GB 325GB
 ```
 
 #### Recreating userdata
