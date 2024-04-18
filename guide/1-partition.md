@@ -62,7 +62,7 @@ mkpart win ntfs 10.2GB 300GB
 #### Creating WinPE partition
 > [!Note]
 > This is optional
-> 
+
 > Replace **300GB** with the end value of Windows
 >
 > Replace **300GB** with the end value you want WinPE to have
