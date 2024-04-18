@@ -171,15 +171,15 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
+#### Disabling boot status policy
+```cmd
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" bootstatuspolicy IgnoreAllFailures
+```
+
 #### Enabling boot menu
 > Only run this command if you use WinPE
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" displaybootmenu yes
-```
-
-#### Disabling boot status policy
-```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" bootstatuspolicy IgnoreAllFailures
 ```
 
 ### Reboot to Android
