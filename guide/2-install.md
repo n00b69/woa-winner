@@ -172,6 +172,7 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
 #### Enabling boot menu
+> Only run this command if you use WinPE
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" displaybootmenu yes
 ```
