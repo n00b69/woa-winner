@@ -96,26 +96,8 @@ format quick fs=fat32 label="ESPWINNER"
 assign letter y
 ```
 
-### Selecting the WinPE partition
-> Skip this step if you are not using WinPE
-> 
-> Replace $ with the partition number of WinPE (should be 31)
-```cmd
-sel par $
-```
-
-#### Formatting WinPE drive
-```cmd
-format quick fs=ntfs label="WINPE"
-```
-
-#### Add letter to WinPE
-```cmd
-assign letter r
-```
-
 ### Selecting the Windows partition
-> Replace $ with the partition number of Windows (should be 31, or 32 if you are using WinPE)
+> Replace $ with the partition number of Windows (should be 31)
 ```cmd
 sel par $
 ```
@@ -128,6 +110,24 @@ format quick fs=ntfs label="WINWINNER"
 #### Add letter to Windows
 ```cmd
 assign letter x
+```
+
+### Selecting the WinPE partition
+> Skip this step if you are not using WinPE
+> 
+> Replace $ with the partition number of WinPE (should be 32)
+```cmd
+sel par $
+```
+
+#### Formatting WinPE drive
+```cmd
+format quick fs=ntfs label="WINPE"
+```
+
+#### Add letter to WinPE
+```cmd
+assign letter r
 ```
 
 #### Exit diskpart
