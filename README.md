@@ -29,7 +29,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Reinstall instructions](guide/reinstall.md)
 
-- ~~[Uninstall instructions](guide/uninstall.md)~~
+- [Uninstall instructions](guide/uninstall.md)
 
 ## Contributors
 [<img alt="ungeskriptet" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/40729975?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/ungeskriptet)
