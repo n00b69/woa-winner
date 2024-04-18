@@ -65,7 +65,7 @@ mkpart win ntfs 10.2GB 300GB
 
 > Replace **300GB** with the end value of Windows
 >
-> Replace **300GB** with the end value you want WinPE to have
+> Replace **325GB** with the end value you want WinPE to have
 ```cmd
 mkpart winpe ntfs 300GB 325GB
 ```
