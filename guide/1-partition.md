@@ -48,45 +48,32 @@ print
 rm $
 ```
 
-## FOR USERS WITH WINPE
-> Skip to "FOR USERS WITHOUT WINPE" if you don't want to use WinPE
-
 #### Creating ESP partition
 ```cmd
 mkpart esp fat32 9730MB 10.2GB
+```
+
+#### Creating Windows partition
+> Replace **300GB** with the value you want to be allocated to Windows
+```cmd
+mkpart win ntfs 10.2GB 300GB
 ```
 
 #### Creating WinPE partition
+> [!Note]
+> This is optional
+> 
+> Replace **300GB** with the end value of Windows
+>
+> Replace **300GB** with the end value you want WinPE to have
 ```cmd
-mkpart pe fat32 10.2GB 25GB
-```
-
-#### Creating Windows partition
-```cmd
-mkpart win ntfs 25GB 312GB
-```
-
-#### Recreating userdata
-```cmd
-mkpart userdata ext4 312GB -0MB
-```
-
-## FOR USERS WITHOUT WINPE
-> Return "FOR USERS WITH WINPE" if you want to use WinPE
-
-#### Creating ESP partition
-```cmd
-mkpart esp fat32 9730MB 10.2GB
-```
-
-#### Creating Windows partition
-```cmd
-mkpart win ntfs 10.2GB 312GB
+mkpart win ntfs 300GB 325GB
 ```
 
 #### Recreating userdata
+> Replace **300GB** with the end value of the Windows or WinPE partition you created above
 ```cmd
-mkpart userdata ext4 312GB -0MB
+mkpart userdata ext4 300GB 512GB
 ```
 
 #### Make ESP bootable
