@@ -29,7 +29,7 @@ adb shell msc.sh
 #### Gdisk
 > Open **gdisk** as an admin, then run the following command in gdisk, replacing **$** with the actual number of the disk
 ```cmd
-\\.\physicaldriver$
+\\.\physicaldrive$
 ```
 
 #### Restoring the GPT table
