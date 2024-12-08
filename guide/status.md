@@ -14,7 +14,7 @@ Alpha, Windows 11 boot but without USB, the next thing is to try to make the USB
 - [x] Charging ```very slow```
 - [x] Display
 - [ ] External display 
-- [x] GPU
+- [ ] GPU
 - [ ] LTE 
 - [ ] Touchscreen 
 - [x] UFS
